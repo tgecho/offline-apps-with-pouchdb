@@ -1,6 +1,7 @@
 import 'babel-polyfill'
 import './index.html'
 import './style.css'
+import './index.appcache'
 
 import PouchDB from 'pouchdb'
 import React from 'react'
