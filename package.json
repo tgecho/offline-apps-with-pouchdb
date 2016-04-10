@@ -1,0 +1,35 @@
+{
+  "name": "offline-apps-with-pouchdb",
+  "version": "1.0.0",
+  "description": "A small app to demonstrate PouchDB in the browser",
+  "repository": "git@github.com:tgecho/offline-apps-with-pouchdb.git",
+  "license": "MIT",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline",
+    "couchdb": "couchdb -a ./couch.ini",
+    "build": "webpack"
+  },
+  "author": "Erik Simmler <tgecho@gmail.com> (http://un.deter.red/)",
+  "dependencies": {
+    "lodash": "^4.9.0",
+    "pouchdb": "^5.2.1",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.6",
+    "babel-loader": "^6.2.2",
+    "babel-plugin-react-transform": "^2.0.0",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "file-loader": "^0.8.5",
+    "react-transform-catch-errors": "^1.0.2",
+    "redbox-react": "^1.2.3",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
