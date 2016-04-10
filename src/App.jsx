@@ -22,12 +22,19 @@ export default React.createClass({
 	},
 	render() {
 		return <div>
+			<Doc key="new" save={this.saveDoc} />
+
 			{Object.keys(this.state.docs).map(id =>
-				<Doc doc={this.state.docs[id]} key={id} />
+				<Doc doc={this.state.docs[id]} key={id} save={this.saveDoc} />
 			)}
 		</div>
 	},
 	componentWillUnmount() {
 		this._changes.cancel()
+	},
+	saveDoc(doc) {
+		return doc._id
+			? this.props.db.put(doc)
+			: this.props.db.post(doc)
 	},
 })
