@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+	padding: .25rem;
+}
+
+.docList {
+	display: flex;
+	width: 100%;
+
+	.doc {
+		flex-basis: 0;
+		flex-grow: 1;
+		overflow: auto;
+	}
+
+	>:first-child ~ .doc {
+		opacity: .5;
+	}
+}
+
+.doc {
+	border: 1px solid #777;
+	padding: .5rem;
+	margin: .25rem;
+
+	pre {
+		margin: 0 0 .5rem;
+	}
+}
+
+
+textarea {
+	display: block;
+	width: 100%;
+	font-size: inherit;
+    font-family: monospace;
+    margin: -3px -3px calc(.5rem + -3px);
+    padding: 2px;
+    white-space: pre;
+}
+
+.error {
+	color: red;
+}
