@@ -24,6 +24,7 @@ export default React.createClass({
 			return <div className="doc">
 				<pre>{pretty(doc)}</pre>
 				<button onClick={this.edit}>Edit</button>
+				<button onClick={this.delete}>Delete</button>
 			</div>
 
 		// Doc does not exist
@@ -43,6 +44,9 @@ export default React.createClass({
 	},
 	onUpdate(value, error) {
 		this.setState({value, error})
+	},
+	delete() {
+		this.props.save({...this.props.doc, _deleted: true})
 	},
 })
 
